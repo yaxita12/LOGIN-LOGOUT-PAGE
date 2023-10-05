@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #login-container {
+            display: block;
+        }
+
+        #registration-container {
+            display: none;
+        }
+
+        #dashboard-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h1>Login</h1>
+        <form>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+
+            <div class="button-container">
+                <button type="button" class="button" onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showRegistrationForm()">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="registration-container">
+        <h1>Registration</h1>
+        <form>
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" required>
+
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required>
+
+            <div class="button-container">
+                <button type="button" class="button" onclick="register()">Register</button>
+                <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="dashboard-container">
+        <h1>Welcome to the Dashboard</h1>
+        <p>You are now logged in!</p>
+        <div class="button-container">
+            <button type="button" class="button" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="Login.js">
+
+</body>
+</html>
